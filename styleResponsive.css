@@ -99,4 +99,8 @@
   .best-seller-container {
     max-width: 250px;
   }
+  .three-dot-list {
+    top: 30px;
+    right: 20px;
+  }
 }

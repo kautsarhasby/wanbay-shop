@@ -343,6 +343,7 @@ nav #search-bar {
   width: 9rem;
   height: 4rem;
   padding: 0.5rem;
+  z-index: 10;
 }
 .three-dot-list > ul {
   display: flex;
