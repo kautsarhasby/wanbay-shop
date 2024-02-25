@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleResponsive.css" />
+    <title>WanBay | E-Commerce Lokal Terbesar</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-logo-container">
+          <div class="nav-logo">
+            <img src="public/shop-solid.svg" alt="" class="logo" />
+            <h2>WanBay</h2>
+          </div>
+        </div>
+        <div class="nav-search-container">
+          <input
+            type=""
+            name=""
+            id="search-bar"
+            placeholder="Search anything..."
+          />
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="" class="cart-shop-nav">
+              <img
+                src="public/cart-shopping-solid.svg"
+                alt=""
+                class="nav-svg"
+              />
+            </a>
+            <div class="pop-up-cart">
+              <div class="pop-up-container">
+                <img src="public/cart-arrow-down-solid.svg" alt="" />
+                <span>Your Cart is Empty</span>
+              </div>
+            </div>
+          </li>
+          <li><input type="submit" value="Sign Up" class="nav-sign up" /></li>
+          <li><input type="submit" value="Log in" class="nav-sign in" /></li>
+        </ul>
+        <div class="burger-container">
+          <img src="public/bars-solid.svg" alt="" class="logo burger" />
+          <div class="burger-list-container">
+            <div class="logo-on-burger">
+              <img src="public/shop-solid.svg" alt="" class="logo" />
+              <span>WanBay</span>
+            </div>
+            <ul class="burger-list">
+              <li><a href="">Your Cart</a></li>
+              <hr />
+              <li><a href="">Sign Up</a></li>
+              <hr />
+              <li>
+                <a href="">Sign In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="slider-page">
+      <div class="slider fade">
+        <img src="public/bannerwanbay1.svg" alt="" class="banner-slider-img" />
+      </div>
+      <div class="slider fade">
+        <img src="public/bannerwanbay2.svg" alt="" class="banner-slider-img" />
+      </div>
+      <div class="slider fade">
+        <img src="public/bannerwanbay3.svg" alt="" class="banner-slider-img" />
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </section>
+    <section class="main-page">
+      <div class="main-category">
+        <h2>Category Product</h2>
+        <ul class="category-card-container">
+          <li class="category-card">
+            <img
+              src="public/category-product/bowl-food-solid.svg"
+              alt=""
+              class="category-icon"
+            />
+            <span>Food and Beverages</span>
+          </li>
+          <li class="category-card">
+            <img
+              src="public/category-product/shirt-solid.svg"
+              alt=""
+              class="category-icon"
+            />
+            <span>Clothes</span>
+          </li>
+          <li class="category-card">
+            <img
+              src="public/category-product/tv-solid.svg"
+              alt=""
+              class="category-icon"
+            />
+            <span>Electronics</span>
+          </li>
+          <li class="category-card">
+            <img
+              src="public/category-product/shoe-prints-solid.svg"
+              alt=""
+              class="category-icon"
+            />
+            <span>Footwear</span>
+          </li>
+          <li class="category-card">
+            <img
+              src="public/category-product/gamepad-solid.svg"
+              alt=""
+              class="category-icon"
+            />
+            <span>Toys</span>
+          </li>
+          <li class="category-card">
+            <img
+              src="public/category-product/pen-ruler-solid.svg"
+              alt=""
+              class="category-icon"
+            />
+            <span>Office and Stationery</span>
+          </li>
+        </ul>
+      </div>
+      <div class="main-best-seller">
+        <h2>Best Seller Products + Discount</h2>
+        <ul class="best-seller-container">
+          <li class="best-seller-products">
+            <button class="three-dot">
+              <img
+                src="public/ellipsis-vertical-solid.svg"
+                style="width: 5px"
+              />
+            </button>
+            <div class="three-dot-list">
+              <ul>
+                <li>Add to Wishlist</li>
+                <hr />
+                <li>Add to Cart</li>
+              </ul>
+            </div>
+
+            <div class="best-seller-details">
+              <div class="image-con-best">
+                <img
+                  src="public/adidas-white.jpg"
+                  alt=""
+                  class="best-seller-img"
+                />
+                <span>&#11088; 4.8 </span>
+              </div>
+              <div class="best-seller-description">
+                <span class="best-seller-title">
+                  Adidas RUNNING Sepatu Duramo Speed Wanita Putih IE9678
+                </span>
+                <div class="seperate-seller">
+                  <span>
+                    <img
+                      src="public/store-solid.svg"
+                      alt=""
+                      class="store-icon"
+                    />
+                    <span style="padding: 1rem">adidas Official Store</span>
+                  </span>
+                  <div>
+                    <span class="best-seller-price">
+                      <span>Rp.950.000</span>
+                      <span>Rp.750.000</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="best-seller-products">
+            <button class="three-dot">
+              <img
+                src="public/ellipsis-vertical-solid.svg"
+                style="width: 5px"
+              />
+            </button>
+            <div class="three-dot-list">
+              <ul>
+                <li>Add to Wishlist</li>
+                <hr />
+                <li>Add to Cart</li>
+              </ul>
+            </div>
+            <div class="best-seller-details">
+              <div class="image-con-best">
+                <img src="public/asus-tuf.jpg" alt="" class="best-seller-img" />
+                <span> &#11088; 5.0 </span>
+              </div>
+              <div class="best-seller-description">
+                <span class="best-seller-title">
+                  ASUS TUF Gaming A15 FA506NF-R525B3T-O - Graphite Black
+                </span>
+                <div class="seperate-seller">
+                  <span>
+                    <img
+                      src="public/store-solid.svg"
+                      alt=""
+                      class="store-icon"
+                    />
+                    <span style="padding: 1rem">Asus Official Store</span>
+                  </span>
+                  <div>
+                    <span class="best-seller-price">
+                      <span>Rp.11.950.000</span>
+                      <span>Rp11.749.000 </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="best-seller-products">
+            <button class="three-dot">
+              <img
+                src="public/ellipsis-vertical-solid.svg"
+                style="width: 5px"
+              />
+            </button>
+            <div class="three-dot-list">
+              <ul>
+                <li>Add to Wishlist</li>
+                <hr />
+                <li>Add to Cart</li>
+              </ul>
+            </div>
+            <div class="best-seller-details">
+              <div class="image-con-best">
+                <img
+                  src="public/realme-11.jpg"
+                  alt=""
+                  class="best-seller-img"
+                />
+                <span> &#11088; 4.7 </span>
+              </div>
+              <div class="best-seller-description">
+                <span class="best-seller-title">
+                  Realme HP 11 4G NFC 8GB/256GB 5000mah|108MP Camera|Helio G99
+                </span>
+                <div class="seperate-seller">
+                  <span>
+                    <img
+                      src="public/store-solid.svg"
+                      alt=""
+                      class="store-icon"
+                    />
+                    <span style="padding: 1rem">realme Official Store</span>
+                  </span>
+                  <div>
+                    <span class="best-seller-price">
+                      <span>Rp4.299.000</span>
+                      <span>Rp3.299.000</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <section>
+        <aside class="footer-left">
+          <span>
+            <img src="public/shop-solid.svg" alt="" class="logo" />
+            <h2>WanBay</h2>
+          </span>
+          <span> One click buy all. </span>
+        </aside>
+        <aside class="footer-right">
+          <span>Follow Us</span>
+          <div>
+            <img
+              src="public/square-facebook.svg"
+              alt=""
+              class="footer-social-icon"
+            />
+            <img
+              src="public/square-instagram.svg"
+              alt=""
+              class="footer-social-icon"
+            />
+            <img
+              src="public/square-x-twitter.svg"
+              alt=""
+              class="footer-social-icon"
+            />
+          </div>
+        </aside>
+      </section>
+      <div class="terms">
+        <span><a href="">Terms and Condition</a></span>
+        <span><a href="">Privacy Policy</a></span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+@media only screen and (max-width: 1100px) {
+  .best-seller-title {
+    font-size: 15px;
+    text-wrap: wrap;
+  }
+  .best-seller-products {
+    height: 100%;
+  }
+  .best-seller-details {
+    flex-direction: column;
+  }
+  .best-seller-description {
+    /* border: blue 2px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .category-card {
+    width: 150px;
+    height: 150px;
+    font-size: 10px;
+  }
+  .category-icon {
+    width: 40px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .logo {
+    width: 30px;
+  }
+  .nav-logo > h2 {
+    font-size: 20px;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .burger-container {
+    display: flex;
+    justify-content: end;
+  }
+  .burger-list-container {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 10rem;
+    height: 11rem;
+    border-radius: 8px;
+    background: whitesmoke;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .burger-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+  }
+  .burger-list > hr {
+    color: slategray;
+    border: 0.5px solid;
+    width: 8rem;
+  }
+  .burger-list > li > a {
+    text-decoration: none;
+    color: black;
+  }
+  .logo-on-burger {
+    padding: 10px 0 0 10px;
+    display: flex;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .seperate-seller {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .seperate-seller > span:first-child {
+    padding: 10px;
+  }
+  .best-seller-price {
+    flex-direction: column-reverse;
+  }
+  .nav-logo-container {
+    display: none;
+  }
+  .nav-search-container {
+    width: 80%;
+  }
+  footer {
+    font-size: 12px;
+  }
+  .footer-social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .best-seller-container {
+    max-width: 250px;
+  }
+}
