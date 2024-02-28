@@ -31,35 +31,50 @@ function showSlide(n) {
   slides[index - 1].style.display = "block";
 }
 
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 const sliderPage = document.querySelector(".slider-page");
-sliderPage.addEventListener("mouseover", () => {
-  const prev = document.querySelector(".prev");
-  const next = document.querySelector(".next");
-  prev.style.display = "block";
-  next.style.display = "block";
-});
-sliderPage.addEventListener("mouseleave", () => {
-  const prev = document.querySelector(".prev");
-  const next = document.querySelector(".next");
-  prev.style.display = "none";
-  next.style.display = "none";
-});
-let slideIndex = 0;
-automaticSlide();
-function automaticSlide() {
-  let i;
-  let slides = document.querySelectorAll(".slider");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
 
-  setTimeout(automaticSlide, 4000); // Change image every 2 seconds
+let slideIndex = 0;
+function automaticSlide(slideIndex) {
+  let timer;
+  let slides = document.querySelectorAll(".slider");
+  slides.forEach((slide, i) => {
+    slide.addEventListener("mouseover", () => {
+      clearTimeout(timer);
+    });
+    if (i == slideIndex) {
+      slide.style.display = "block";
+      sliderPage.addEventListener("mouseover", () => {
+        prev.style.display = "block";
+        next.style.display = "block";
+      });
+      sliderPage.addEventListener("mouseleave", () => {
+        prev.style.display = "none";
+        next.style.display = "none";
+      });
+      slide.addEventListener("mouseleave", () => {
+        timer = setTimeout(() => {
+          slideIndex++;
+          if (slideIndex >= slides.length) {
+            slideIndex = 0;
+          }
+          automaticSlide(slideIndex);
+        }, 3000);
+      });
+    } else {
+      slide.style.display = "none";
+    }
+  });
+  timer = setTimeout(() => {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    automaticSlide(slideIndex);
+  }, 3000);
 }
+automaticSlide(slideIndex);
 // CART-SHOP-NAV
 const cart = document.querySelector(".cart-shop-nav");
 cart.addEventListener("click", (e) => e.preventDefault());
