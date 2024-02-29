@@ -127,6 +127,7 @@ nav #search-bar {
   margin: auto;
   border-radius: 8px;
   position: relative;
+  cursor: pointer;
 }
 
 .slider {
@@ -177,6 +178,24 @@ nav #search-bar {
   to {
     opacity: 1;
   }
+}
+
+.dot-slider > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  gap: 1rem;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+}
+.dot.purple {
+  background-color: purple;
 }
 /* CATEGORY PAGE*/
 .main-page {

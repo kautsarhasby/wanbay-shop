@@ -9,6 +9,7 @@ cartShop.addEventListener("mouseleave", () => {
 });
 
 let index = 1;
+const dot = document.querySelectorAll(".dot");
 showSlide(index);
 
 function plusSlides(n) {
@@ -28,53 +29,52 @@ function showSlide(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  for (i = 0; i < dot.length; i++) {
+    dot[i].className = dot[i].className.replace(" purple", "");
+  }
   slides[index - 1].style.display = "block";
+  dot[index - 1].className += " purple";
+  console.log(dot[index - 1]);
 }
 
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const sliderPage = document.querySelector(".slider-page");
+sliderPage.addEventListener("mouseover", () => {
+  prev.style.display = "block";
+  next.style.display = "block";
+});
+sliderPage.addEventListener("mouseleave", () => {
+  prev.style.display = "none";
+  next.style.display = "none";
+});
 
 let slideIndex = 0;
+
 function automaticSlide(slideIndex) {
-  let timer;
-  let slides = document.querySelectorAll(".slider");
+  const dot = document.querySelectorAll(".dot");
+  const slides = document.querySelectorAll(".slider");
   slides.forEach((slide, i) => {
-    slide.addEventListener("mouseover", () => {
-      clearTimeout(timer);
-    });
-    if (i == slideIndex) {
+    if (i === slideIndex) {
       slide.style.display = "block";
-      sliderPage.addEventListener("mouseover", () => {
-        prev.style.display = "block";
-        next.style.display = "block";
-      });
-      sliderPage.addEventListener("mouseleave", () => {
-        prev.style.display = "none";
-        next.style.display = "none";
-      });
-      slide.addEventListener("mouseleave", () => {
-        timer = setTimeout(() => {
-          slideIndex++;
-          if (slideIndex >= slides.length) {
-            slideIndex = 0;
-          }
-          automaticSlide(slideIndex);
-        }, 3000);
-      });
+      dot[i].classList.add("purple");
     } else {
       slide.style.display = "none";
+      dot[i].classList.remove("purple");
     }
   });
-  timer = setTimeout(() => {
+
+  setTimeout(() => {
     slideIndex++;
     if (slideIndex >= slides.length) {
       slideIndex = 0;
+      dot[slideIndex].classList.add("purple");
     }
     automaticSlide(slideIndex);
   }, 3000);
 }
 automaticSlide(slideIndex);
+
 // CART-SHOP-NAV
 const cart = document.querySelector(".cart-shop-nav");
 cart.addEventListener("click", (e) => e.preventDefault());
